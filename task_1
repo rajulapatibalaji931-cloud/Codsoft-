@@ -9,7 +9,9 @@ class Main {
         int d=0,t=0;
         while(c=='y' || c=='Y'){
         System.out.println("game started ⏳:    ");
-            while(d<6){
+        System.out.println("how many chances will you want to guess the number 🤔 ?");
+        int e=s.nextInt();
+            while(d<e+1){
         d++;
         System.out.println("guess a  number between 1 to 100:");
         int b=s.nextInt();
@@ -30,7 +32,7 @@ class Main {
         System.out.println("game ended ⏱️");
      System.out.println("thanks for playing☺️");   
     }
-        if(d>4){
+        if(d>e-1){
         System.out.println("out of attemts 🚨 try again:");
         System.out.println("🎯 your total score:"+t);
         System.out.println("thanks for playing☺️");
