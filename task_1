@@ -1,0 +1,42 @@
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        Random r=new Random();
+        int a=r.nextInt(100)+1;
+        char c='y';
+        int d=0,t=0;
+        while(c=='y' || c=='Y'){
+        System.out.println("game started ⏳:    ");
+            while(d<6){
+        d++;
+        System.out.println("guess a  number between 1 to 100:");
+        int b=s.nextInt();
+        if(b<a)    
+        System.out.println("guessed  number is too low 📉");
+        else if(b>a)
+        System.out.println("guessed  number is too high 📈");
+        else{
+        System.out.println("yes!,you guessed  number is correct 🎉\n"+"you guessed in "+d+" attemts");
+        t++;
+        a=r.nextInt(100)+1;
+        System.out.println("if you want to play agian ⛹(y/n):");
+        c=s.next().charAt(0);
+        break;
+        }}
+        if(c!='y' && c!='Y'){
+        System.out.println("🎯 your total score:"+t);
+        System.out.println("game ended ⏱️");
+     System.out.println("thanks for playing☺️");   
+    }
+        if(d>4){
+        System.out.println("out of attemts 🚨 try again:");
+        System.out.println("🎯 your total score:"+t);
+        System.out.println("thanks for playing☺️");
+        break;
+        }else
+        d=0;
+        }
+    }
+}
